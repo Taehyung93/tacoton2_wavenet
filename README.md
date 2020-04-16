@@ -196,6 +196,8 @@ parallel -j 4 --progress mv {.}_tmp.wav {.}.wav :::: wavs.lst
 
 - GPU 를 여러개 달아놓아도 해당 소스는 병렬로 학습하도록 코딩되어있지않아서 GPU 를 하나만 먹고 돌아갑니다.
 - 특별히 python 버전은 상관없는 것으로 보입니다. 3.5 - 3.6 전부 잘 돌아가는 것을 확인했습니다.
+-docker 에서 음원을 가져오는 방법 
+$docker cp [CONTAINER_ID]:/root/pv_tacotron2_wavenet/tacotron_output/logs-inference/wavs/speech-wav-00001-mel.wav [HOME_DIRECTORY]
 
 문의사항은 kaustris@gmail.com 으로 메일로 주시면 아는 한도내에서 답변드리겠습니다.
 ```
