@@ -71,7 +71,7 @@ $ python3 wavenet_synthesize.py
 ## Install
 
 ```sh
-$ git clone
+$ git clone https://github.com/Taehyung93/tacoton2_wavenet.git
 $ cd tacotron2_wavenet
 $ sudo apt-get install portaudio19-dev python-pyaudio
 > pyaudio 설치위해서 필요
