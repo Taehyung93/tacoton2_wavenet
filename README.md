@@ -15,7 +15,7 @@ tensorflow 1.9 버전은 CUDA 9.0 만을 물고 돌아가며, CUDA 9.0 은 Ubunt
 
 그래서 Ubuntu 18.04, Windows 등 다양한 환경에서 돌리게 하기위해 Docker Image 화를 완료했습니다.
 
-Nvidia GPU 를 가지고 있고, Driver가 384 이상 버전이면 해당 Image 를 Pull 한 뒤 바로 사용해볼 수 있습니다. 
+Nvidia GPU 를 가지고 있고, Driver가 384 이상 버전이면 해당 Image 를 Pull 한 뒤 바로 음성을 합성 해볼 수 있습니다. 
 ```
 
 ## Docker
@@ -28,6 +28,8 @@ Nvidia GPU 를 가지고 있고, Driver가 384 이상 버전이면 해당 Image 
 직접 Install 부터 진행하시고 싶으시면 아래 Install 항목 부터 시작하시면 되겠습니다.
 
 아래는 Ubuntu docker 설치 방식으로 Windows 와 Mac 은 docker 설치 방법이 다릅니다.
+
+주의! 학습을 위한 Data 는 들어가지 있지않습니다. 학습을 진행하려면 아래 dataset download 항목을 한 뒤, 진행해주세요.
 
 0. Requirements
 
@@ -90,6 +92,7 @@ $ nvcc -V
 > 그러나 위 데이터셋으로는 바로 학습을 돌릴 수 없어서 학습할 수 있게 변경 후 아래 링크로 공유, 방법도 기재했습니다. 
 
 - [KSS](https://www.dropbox.com/s/bmwnqkmka8aoege/KSS.tar.gz?dl=0)  
+$ wget https://www.dropbox.com/s/bmwnqkmka8aoege/KSS.tar.gz?dl=0
 > 해당 데이터 셋을 data 디렉토리 내부로 이동 후 압축해제  
 
 ```
