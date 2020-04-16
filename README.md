@@ -37,13 +37,16 @@ Nvidia GPU 를 가지고 있고, Driver가 384 이상 버전이면 해당 Image 
 1. docker install
 $ curl -fsSL https://get.docker.com/ | sudo sh
 $ sudo usermod -aG docker $USER  
-->현재 접속중인 사용자에게 권한주기 위한 것입니다.
+>현재 접속중인 사용자에게 권한주기 위한 것입니다.
+https://github.com/NVIDIA/nvidia-docker/blob/master/README.md#quickstart
+> 상기 링크로 들어가서 Nvidia toolkit 설치 (Ubuntu 용)
+> 이것을 해줘야 GPU 를 사용할 수 있다.
 
 2. doker image pull & run
-$ docker pull kim93/tts
+$ docker pull kim93/tts:v1
 > image 다운로드되면 아래 커맨드로 확인
 $ docker images 
-$ docker run -it --rm kim93/tts /bin/bash
+$ docker run --gpus all -it --rm -e LC_ALL=C.UTF-8 kim93/tts:v1 /bin/bash
 $ cd /root/pv_tacoron2_wavenet 
 > 이제 여기서 만들고 싶은 문장을 sentences 에 넣고 아래대로 하면 합성이됩니다.
 $ python3 tacotron_synthesize.py --mode=inference
