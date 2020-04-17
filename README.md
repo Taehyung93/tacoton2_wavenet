@@ -46,10 +46,10 @@ https://github.com/NVIDIA/nvidia-docker/blob/master/README.md#quickstart
 
 2. doker image pull & run
 $ docker pull kim93/tts:v1
-> image 다운로드되면 아래 커맨드로 확인
 > GPU 가 없어도 tacotron2_GriffinLim 알고리즘으로 합성하는 것은 (Wavenet 합성은 GPU 로만 가능)가능합니다.
 > GPU 없이 합성해보고 싶으신 분은 $ docker pull kim93/tts_cpu:v1 으로 docker 이미지를 받아서 진행해보세요.
 $ docker images 
+> image 다운로드되면 위 커맨드로 확인
 $ docker run --gpus all -it --rm -e LC_ALL=C.UTF-8 kim93/tts:v1 /bin/bash
 $ cd /root/pv_tacoron2_wavenet 
 > 이제 여기서 만들고 싶은 문장을 sentences 에 넣고 아래대로 하면 합성이됩니다.
