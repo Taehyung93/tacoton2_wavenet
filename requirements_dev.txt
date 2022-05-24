@@ -8,6 +8,6 @@ scipy
 librosa
 matplotlib==3.0.3
 tqdm==4.42.1
-tensorflow-gpu==2.5.3
+tensorflow-gpu==2.6.4
 num2words
 lws
