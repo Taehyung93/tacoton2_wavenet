@@ -7,7 +7,7 @@ inflect
 scipy
 librosa
 matplotlib==3.0.3
-tqdm==4.42.1
+tqdm==4.66.3
 tensorflow-gpu==2.12.0
 num2words
 lws
